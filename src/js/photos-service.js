@@ -21,7 +21,6 @@ export default class PhotosApiService {
                     page: this.page
                 }        
             });
-        // this.totalHits = this.page * PER_PAGE
         this.page += 1;
         return response.data;
     }
@@ -31,7 +30,7 @@ export default class PhotosApiService {
     }
 
     get currentTotalHits() {
-        return PER_PAGE * (this.page-1);
+        return PER_PAGE * (this.page - 1);
     }
 
     get query() {
